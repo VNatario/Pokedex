@@ -7,7 +7,17 @@ export default function Pokemon({ pokemon }) {
   const router = useRouter();
 
   if (router.isFallback) {
-    return <div>Loading...</div>;
+    return (
+      <>
+        <Image
+          src="/images/pokeballSpin.gif"
+          width="200"
+          height="200"
+          alt="Pokeball spin"
+        />
+        <h2>Loading...</h2>
+      </>
+    );
   }
   return (
     <div>
@@ -75,11 +85,18 @@ export async function getStaticProps({ params }) {
     const res = await fetch(
       `https://pokeapi.co/api/v2/pokemon/${params.pokemonId}`
     );
-    const data = await res.json();
+
+    const { id, name, types, height, weight } = await res.json();
 
     return {
       props: {
-        pokemon: data,
+        pokemon: {
+          id,
+          name,
+          types,
+          height,
+          weight,
+        },
         revalidate: 10,
       },
     };
