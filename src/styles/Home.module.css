@@ -1,0 +1,23 @@
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  max-width: 30rem;
+  margin: 0 auto 4rem;
+
+  border: 3px solid #2c2c2c;
+  border-radius: 100px;
+  background-color: #e5e5e5;
+  box-shadow: 10px 10px 0px #2c2c2c;
+}
+
+.pokemonContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 75rem;
+  margin: 0 auto;
+  gap: 3rem;
+}

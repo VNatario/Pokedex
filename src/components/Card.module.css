@@ -1,0 +1,29 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 1.5rem;
+  width: 20%;
+
+  border: 3px solid #2c2c2c;
+  border-radius: 40px;
+  background-color: #eeeded;
+  cursor: pointer;
+  box-shadow: 5px 10px 0px #2c2c2c;
+  transition: 300ms;
+}
+
+.card:hover {
+  box-shadow: none;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.id {
+  font-size: 20px;
+}
+
+.name {
+  text-transform: capitalize;
+}
